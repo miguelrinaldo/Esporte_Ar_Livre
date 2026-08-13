@@ -1,6 +1,4 @@
 import { Routes } from '@angular/router';
-import { MenuComponent } from './component/menu-cpmponent/menu-component';
-import path from 'path';
 import { HomeComponent } from './component/home-component/home-component';
 import { AtletaComponent } from './component/atleta-component/atleta-component';
 export const routes: Routes = [
@@ -21,3 +19,4 @@ export const routes: Routes = [
     component: AtletaComponent
 }
 ];
+

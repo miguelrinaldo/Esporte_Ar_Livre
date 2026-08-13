@@ -1,0 +1,17 @@
+#div-home {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  padding: 12px 16px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+#titulo-home {
+  color: #007bff;
+  font-weight: 600;
+}
