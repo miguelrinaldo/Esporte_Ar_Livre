@@ -17,6 +17,7 @@ export class AtletaService {
     }
 
     lista(){
+        console.table(this.atletas)
        return this.atletas
     }
 
