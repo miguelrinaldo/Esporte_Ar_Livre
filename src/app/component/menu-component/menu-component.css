@@ -17,7 +17,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1b5e20;
+    background-color: #6e62df;
     padding: 15px 40px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
@@ -51,7 +51,7 @@ body {
 
 .lnk-menu:hover {
     background-color: #ffffff;
-    color: #1b5e20;
+    color: #6e62df;
 }
 
 /* Responsivo para telas menores */

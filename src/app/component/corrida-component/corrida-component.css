@@ -1,0 +1,75 @@
+#div-form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #d5dde9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 82, 204, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+#div-form h2 {
+    color: #ffffff;
+    background-color: #6e62df;
+    padding: 15px 20px;
+    margin: -30px -30px 25px -30px;
+    border-radius: 10px 10px 0 0;
+    font-size: 22px;
+}
+
+#form-corrida {
+    display: flex;
+    flex-direction: column;
+}
+
+#form-corrida label {
+    color: #0d47a1;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.input01{
+   
+    height: 100px;
+}
+
+.input01,
+.input02 {
+    padding: 10px;
+    border: 1px solid #90caf9;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input01:focus,
+.input02:focus {
+    border-color: #1565c0;
+    box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.2);
+}
+
+
+
+
+#div-btns {
+    margin-top: 25px;
+    text-align: right;
+}
+
+#btnAdd {
+    background-color: #1565c0;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#btnAdd:hover {
+    background-color: #0d47a1;
+}
