@@ -1,13 +1,6 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-h2{
-    text-transform: uppercase;
     
-}
+
 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -23,16 +16,18 @@ body {
 }
 
 #logo {
-    color: #fff;
+    color: #161b1b;
     font-size: 1.6rem;
     font-weight: 700;
     letter-spacing: 0.5px;
+     font-family: 'Urban Gear';
 }
 
 #menu-ul {
     list-style: none;
     display: flex;
     gap: 10px;
+    font-family: 'Urban Gear';
 }
 
 #menu-ul li {
@@ -41,7 +36,7 @@ body {
 
 .lnk-menu {
     display: block;
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     font-size: 0.95rem;
     padding: 10px 16px;
