@@ -26,13 +26,17 @@ export class AtletaComponent {
   idAtleta = 0
 
   //DECLARAÇÃO DO CONSTRUTOR  
-  constructor(private atletaService: AtletaService, private route: ActivatedRoute, private cdr: ChangeDetectorRef) { }
-
+  constructor(
+    private atletaService: AtletaService,
+    private route: ActivatedRoute, 
+    private cdr: ChangeDetectorRef
+   ) {  }
+   
   //DECLARAÇÃO DE FUNÇÕES
   exibeDados() {
     console.log(this.nome, this.cpf, this.sexo, this.rua_logradouro, this.bairro, this.cidade, this.uf)
   }
-
+  //EXECUTA O OBJETO
   ngOnInit() {
     this.idAtleta = Number(this.route.snapshot.paramMap.get('id'))
 

@@ -1,44 +1,90 @@
-#div-lista{
-    width: 1000px;
-    padding: 25px;
-    margin: 20px auto;
-    color: var( --cor-secundaria);
+#div-lista {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-family: Arial, sans-serif;
 }
 
-h2{
-    margin: 30px 0px;
+#div-lista h2 {
+    margin: -30px -30px 20px -30px;
+    padding: 15px 20px;
+    background-color: #1565c0;
+    color: #ffffff;
+    border-radius: 10px 10px 0 0;
+    font-size: 22px;
 }
 
-.item-atletas{
-    margin: 20px 0px;
-    padding: 10px;
+#lista-atletas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-atletas {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 12px 15px;
+    background-color: #f5f8ff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    transition: background-color 0.2s;
 }
 
-/*FORMATAÇÃO DOS BOTÕES*/
-.lnk-editar, .lnk-excluir {
-    text-decoration: none;
-    text-transform: uppercase;
-    width: 100px;
-    text-align: center;
-    margin: 8px 0px;
-    transition: opacity 0.5s ease;
-    letter-spacing: 3px;
+.item-atletas:hover {
+    background-color: #eaf1ff;
+}
+
+.dados-atleta {
+    font-size: 14px;
+    color: #333;
+}
+
+.links-lista {
+    display: flex;
+    gap: 15px;
+    white-space: nowrap;
+}
+
+.lnk-editar,
+.lnk-excluir {
     cursor: pointer;
-}
-
-a:hover {
-    opacity: 0.5;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 .lnk-editar {
-    margin-right: 10px;
-    color: var(  --cor-primaria);
+    color: #1565c0;
+}
+
+.lnk-editar:hover {
+    background-color: #1565c0;
+    color: #ffffff;
 }
 
 .lnk-excluir {
-    margin-left: 10px;
-    color: var( --cor-botao2);
+    color: #c62828;
+}
+
+.lnk-excluir:hover {
+    background-color: #c62828;
+    color: #ffffff;
+}
+
+.div-item-pessoa {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+    font-style: italic;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border: 1px dashed #ccc;
 }
