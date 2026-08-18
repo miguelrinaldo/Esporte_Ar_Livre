@@ -1,7 +1,7 @@
 #div-form {
     max-width: 700px;
     margin: 40px auto;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 30px 40px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -12,11 +12,11 @@
     font-size: 1.5rem;
     margin-bottom: 20px;
     padding-bottom: 12px;
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 2px solid #fffefe;
 }
 
 #form-atleta {
-    display: grid;
+  
     grid-template-columns: 1fr 1fr;
     gap: 15px 20px;
 }
@@ -32,11 +32,11 @@
 #form-atleta input[type="text"] {
     width: 100%;
     padding: 10px 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #27282b;
     border-radius: 6px;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: border-color 0.4s ease, box-shadow 0.3s ease;
 }
 
 #form-atleta input[type="text"]:focus {
@@ -83,6 +83,6 @@
 }
 
 #btnAdd {
-    background-color: #6a68dd;
+    background-color: #ffffff;
     
 }
