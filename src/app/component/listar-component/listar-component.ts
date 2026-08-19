@@ -20,7 +20,7 @@ export class AtletaListaComponent {
 
   //EXECUTAR INSTRUÇÕES AO CARREGAR CRIAR O COMPONENTE
   ngOnInit() {
-    this.listaAtletas()
+    this.listarAtletas()
   }
 
   //LISTAR OS ATLETAS
@@ -28,6 +28,8 @@ export class AtletaListaComponent {
     this.http.listarPessoa()
       .subscribe({
         next: (dados) => {
+
+          console.table(dados)
           //this.listaAtletas = [...dados].sort((a, b) => a.nome.localeCompare(b.nome))
           this.listaAtletas.set([...dados].sort((a, b) => a.nome.localeCompare(b.nome)))
         },
