@@ -7,4 +7,12 @@ import { FormsModule } from "@angular/forms";
   templateUrl: './corrida-component.html',
   styleUrl: './corrida-component.css',
 })
-export class CorridaComponent {}
+export class CorridaComponent {
+  //DEFININDO OS ATRIBUTOS DO COMPONENTE CorridaComponent
+  id = 0 
+  descricao_corrida = ''
+  distancia5km = false
+  distancia10km = false
+  distancia25km = false
+
+}
