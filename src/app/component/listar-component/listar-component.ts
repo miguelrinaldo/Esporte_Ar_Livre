@@ -3,6 +3,7 @@ import { AtletaService } from '../../service/atleta-service';
 import { Pessoa } from '../../models/pessoa';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-atleta-lista-component',
   imports: [],
