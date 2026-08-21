@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CorridaLista } from './corrida-lista';
+import { CorridaListaComponent } from './corrida-lista-component';
 
 describe('CorridaLista', () => {
-  let component: CorridaLista;
-  let fixture: ComponentFixture<CorridaLista>;
+  let component: CorridaListaComponent;
+  let fixture: ComponentFixture<CorridaListaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CorridaLista],
+      imports: [CorridaListaComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(CorridaLista);
+    fixture = TestBed.createComponent(CorridaListaComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

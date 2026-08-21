@@ -1,0 +1,48 @@
+<div id="div-form">
+    <h2>Inscrição</h2>
+
+    <form id="form-inscricao">
+        <label for="atleta_cadastrado">Atleta Cadastro</label>
+        <select name="" id="">
+            <option value="" disabled selected>Selecione o Atleta</option>
+            <option value="">Miguel Rinaldo</option>
+        </select>
+
+
+         <label for="buscar_cpf">Ou Buscar por CPF</label>
+         <input type="number" name="buscar_cpf" id="buscar_cpf" class="entrada" required maxlength="11" placeholder="000.000.000-00">
+         <label for="corrida_escolhida">Corrida Escolhida</label>
+        <select name="" id="">
+            <option value="">Circuito das Estações - Etapa Verão (15/11/2026)</option>
+        </select>
+
+         <div id="div-checkbox">
+         <label for="distancia_prova">Distância da Prova</label>
+         
+            <input type="checkbox" name="distancia5km"   id="distancia5km"  value="5km"> 5Km
+            <input type="checkbox" name="distancia10km"  id="distancia10km" class="btnSelecao" value="10km"> 10Km
+            <input type="checkbox" name="distancia25km"   id="distancia25km" class="btnSelecao" value="25km"> 25Km
+          
+          
+          
+            <label for="tamanho_camiseta"> Tamanho da Camiseta (Kit)</label>
+           <select name="" id="">
+            <option value="" disabled selected>Selecione</option>
+            <option value="">Tamanho PP</option>
+           </select>
+           <label for="categoria_faixa">Categoria / Faixa Etária </label>
+           <input type="text" name="categoria_faixa" id="categoria_faixa" class="" required maxlength="80" placeholder="Geral Masculino / 30-39 anos">
+
+
+          <div id="valor">
+           <h2>Valor da Inscrição</h2>
+           <h2>R$ 90,00</h2>
+           
+
+           <button type="submit" id="botao_adicionar">Finalizar e Ir para Pagamento</button>
+
+
+         </div>
+         </div>
+    </form>
+</div>

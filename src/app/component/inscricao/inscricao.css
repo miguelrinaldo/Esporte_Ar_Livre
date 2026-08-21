@@ -1,0 +1,163 @@
+#div-form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px 35px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+#div-form h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 12px;
+}
+
+#form-inscricao {
+    display: flex;
+    flex-direction: column;
+}
+
+#form-inscricao label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 6px;
+    margin-top: 14px;
+}
+
+#form-inscricao > label:first-of-type {
+    margin-top: 0;
+}
+
+/* Selects e input de CPF */
+#form-inscricao select,
+.entrada {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccd6dd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background-color: #ffffff;
+    color: #2c3e50;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#form-inscricao select:focus,
+.entrada:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+#form-inscricao select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2334495e' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 36px;
+}
+
+/* Remove as setas do input number (CPF) */
+.entrada::-webkit-outer-spin-button,
+.entrada::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.entrada[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Bloco de distância + kit + categoria */
+#div-checkbox {
+    display: flex;
+    flex-direction: column;
+    margin-top: 14px;
+    padding: 14px 16px;
+    background-color: #f4f7f9;
+    border-radius: 8px;
+    border: 1px solid #e0e6ea;
+}
+
+#div-checkbox > label:first-of-type {
+    margin-top: 0;
+}
+
+#div-checkbox label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #34495e;
+    margin-top: 14px;
+    margin-bottom: 6px;
+}
+
+#div-checkbox input[type="checkbox"] {
+    margin-right: 6px;
+    vertical-align: middle;
+    accent-color: #3498db;
+    cursor: pointer;
+}
+
+.btnSelecao,
+#distancia5km {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+#div-checkbox select,
+#categoria_faixa {
+    margin-top: 6px;
+}
+
+/* Bloco de valor da inscrição */
+#valor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 16px 18px;
+    background-color: #eaf4fb;
+    border: 1px solid #bfe0f5;
+    border-radius: 8px;
+}
+
+#valor h2 {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: left;
+}
+
+#valor h2:last-child {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #27ae60;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    #div-form {
+        margin: 20px 16px;
+        padding: 24px 20px;
+    }
+
+    #valor {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+}

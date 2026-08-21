@@ -1,75 +1,153 @@
 #div-form {
     max-width: 500px;
     margin: 40px auto;
-    padding: 30px;
+    padding: 30px 35px;
     background-color: #ffffff;
-    border: 1px solid #d5dde9;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 82, 204, 0.1);
-    font-family: Arial, sans-serif;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 #div-form h2 {
-    color: #ffffff;
-    background-color: #6e62df;
-    padding: 15px 20px;
-    margin: -30px -30px 25px -30px;
-    border-radius: 10px 10px 0 0;
-    font-size: 22px;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 12px;
 }
 
-#form-corrida {
+#form-atleta {
     display: flex;
     flex-direction: column;
 }
 
-#form-corrida label {
-    color: #0d47a1;
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-size: 14px;
-}
-.input01{
-   
-    height: 100px;
+#form-atleta label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 6px;
+    margin-top: 14px;
 }
 
-.input01,
-.input02 {
-    padding: 10px;
-    border: 1px solid #90caf9;
-    border-radius: 6px;
-    font-size: 14px;
-    outline: none;
+#form-atleta label:first-of-type {
+    margin-top: 0;
+}
+
+.elem-form01 {
+    width: 100%;
+    min-height: 90px;
+    padding: 10px 12px;
+    border: 1px solid #ccd6dd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    resize: vertical;
+    box-sizing: border-box;
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.input01:focus,
-.input02:focus {
-    border-color: #1565c0;
-    box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.2);
+.elem-form01:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
 }
 
+.input02 {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccd6dd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
 
+.input02:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
 
+#div-checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 12px 14px;
+    background-color: #f4f7f9;
+    border-radius: 8px;
+    border: 1px solid #e0e6ea;
+}
+
+#div-checkbox input[type="checkbox"] {
+    margin-right: 6px;
+    vertical-align: middle;
+    accent-color: #3498db;
+    cursor: pointer;
+}
+
+.btnSelecao {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
 
 #div-btns {
-    margin-top: 25px;
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+#btnAdd,
+#btnLimpar {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
 }
 
 #btnAdd {
-    background-color: #1565c0;
+    background-color: #3498db;
     color: #ffffff;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 6px;
-    font-size: 15px;
-    cursor: pointer;
-    transition: background-color 0.2s;
 }
 
 #btnAdd:hover {
-    background-color: #0d47a1;
+    background-color: #2980b9;
+}
+
+#btnAdd:active {
+    transform: scale(0.98);
+}
+
+#btnLimpar {
+    background-color: #ecf0f1;
+    color: #7f8c8d;
+    border: 1px solid #dcdfe1;
+}
+
+#btnLimpar:hover {
+    background-color: #dfe4e6;
+}
+
+#btnLimpar:active {
+    transform: scale(0.98);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    #div-form {
+        margin: 20px 16px;
+        padding: 24px 20px;
+    }
+
+    #div-btns {
+        flex-direction: column;
+    }
 }
