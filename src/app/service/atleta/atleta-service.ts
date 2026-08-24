@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { Pessoa } from '../models/pessoa';
+import { Pessoa } from '../../models/pessoa';
 
 @Injectable({
   providedIn: 'root',
@@ -44,6 +44,7 @@ export class AtletaService {
 
     return this.http.put<Pessoa>(urlApi, pessoa)
   }
+
 
   /*
   private atletas: Pessoa[] = []

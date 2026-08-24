@@ -148,6 +148,51 @@
     color: #27ae60;
 }
 
+/* Checkbox de termos */
+#div-checkbox > input[name="termos"] {
+    margin-top: 18px;
+    margin-right: 8px;
+    accent-color: #3498db;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Como o checkbox de termos e o texto ficam soltos (não têm wrapper),
+   usamos flex no próprio #div-checkbox pra alinhar essa linha */
+#div-checkbox {
+    display: block;
+}
+
+#div-checkbox input[name="termos"] {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+/* Botão de finalizar */
+#botao_adicionar {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px 20px;
+    background-color: #27ae60;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+#botao_adicionar:hover {
+    background-color: #219150;
+}
+
+#botao_adicionar:active {
+    transform: scale(0.98);
+}
+
 /* Responsivo */
 @media (max-width: 600px) {
     #div-form {

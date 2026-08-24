@@ -1,7 +1,8 @@
 import { Component, signal } from '@angular/core';
-import { AtletaService } from '../../service/atleta-service';
+import { AtletaService } from '../../service/atleta/atleta-service';
 import { Pessoa } from '../../models/pessoa';
 import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -67,4 +68,22 @@ export class AtletaListaComponent {
   buscarPessoa(idAtleta: Pessoa){
     this.router.navigate(['/cadastroatleta', idAtleta])
   }
+
+   calculodeidade(data_nascimento: string): number{
+    const nascimento = new Date (data_nascimento)
+    const agora = new Date
+
+    let idade = agora.getFullYear() - nascimento.getFullYear()
+    const mes = agora.getMonth() - nascimento.getMonth()
+
+    if(mes < 0 || mes === 0 && agora.getDate() < nascimento.getDate()){
+      idade--
+    }
+    return idade
+  }
+
+  calcularidade(data_nascimento: string){
+    return this.http.calularidade(data_nascimento)
+  }
+
 }

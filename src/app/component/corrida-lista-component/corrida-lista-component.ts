@@ -4,6 +4,7 @@ import { Corrida } from '../../models/Corrida';
 import { Router } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-corrida-lista-component',
   imports: [],
@@ -17,6 +18,7 @@ export class CorridaListaComponent {
   constructor(
      private corridaService: CorridaService,
      private router: Router
+
     ) { }
 
   ngOnInit() {
@@ -62,5 +64,6 @@ export class CorridaListaComponent {
     
   }
 
+ 
 
 }

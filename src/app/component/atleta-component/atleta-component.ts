@@ -1,6 +1,6 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AtletaService } from '../../service/atleta-service';
+import { AtletaService } from '../../service/atleta/atleta-service';
 import { Pessoa } from '../../models/pessoa';
 import { ActivatedRoute } from '@angular/router';
 
@@ -15,6 +15,7 @@ export class AtletaComponent {
   id = 0
   nome = ''
   cpf = 0
+  data_nascimento = ''
   sexo = ''
   cep = 0
   rua_logradouro = ''
@@ -34,7 +35,7 @@ export class AtletaComponent {
    
   //DECLARAÇÃO DE FUNÇÕES
   exibeDados() {
-    console.log(this.nome, this.cpf, this.sexo, this.rua_logradouro, this.bairro, this.cidade, this.uf)
+    console.log(this.nome, this.cpf, this.sexo, this.rua_logradouro, this.data_nascimento, this.bairro, this.cidade, this.uf)
   }
   //EXECUTA O OBJETO
   ngOnInit() {
@@ -54,6 +55,7 @@ export class AtletaComponent {
           this.id = objAtleta.id
           this.nome = objAtleta.nome
           this.cpf = objAtleta.cpf
+          this.data_nascimento = String(objAtleta.data_nascimento)
           this.sexo = objAtleta.sexo
           this.cep = objAtleta.cep
           this.rua_logradouro = objAtleta.ruaLogradouro
@@ -72,6 +74,7 @@ export class AtletaComponent {
     const pessoaAtleta = new Pessoa()
     pessoaAtleta.nome = this.nome
     pessoaAtleta.cpf = this.cpf
+    pessoaAtleta.data_nascimento = this.data_nascimento
     pessoaAtleta.sexo = this.sexo
     pessoaAtleta.cep = this.cep
     pessoaAtleta.ruaLogradouro = this.rua_logradouro
@@ -132,5 +135,8 @@ export class AtletaComponent {
     this.cidade = ''
     this.uf = ''
   }
+
+  
+  
 
 }
