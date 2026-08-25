@@ -69,7 +69,9 @@ export class AtletaListaComponent {
     this.router.navigate(['/cadastroatleta', idAtleta])
   }
 
-   calculodeidade(data_nascimento: string): number{
+  
+
+ CalcularIdade(data_nascimento: string): number{
     const nascimento = new Date (data_nascimento)
     const agora = new Date
 
@@ -82,8 +84,6 @@ export class AtletaListaComponent {
     return idade
   }
 
-  calcularidade(data_nascimento: string){
-    return this.http.calularidade(data_nascimento)
-  }
+
 
 }

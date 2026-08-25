@@ -1,16 +1,23 @@
+import { provideHttpClient } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
-
 import { AtletaService } from './atleta-service';
 
-describe('AtletaService', () => {
-  let service: AtletaService;
+let service : AtletaService
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(AtletaService);
-  });
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      
+      providers: [
+        AtletaService,
+        provideHttpClient
+      ]
+    }).compileComponents();
+   
+     service = TestBed.inject(AtletaService)
+   
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
+  it('Resultado esperado é calcular corretamente a idade', () => {
+    const resultado = service.CalcularIdade('2007-02-11')
+    expect(resultado).toBe(19);
   });
 });

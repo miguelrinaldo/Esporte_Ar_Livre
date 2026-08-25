@@ -45,6 +45,19 @@ export class AtletaService {
     return this.http.put<Pessoa>(urlApi, pessoa)
   }
 
+ CalcularIdade(data_nascimento: string): number{
+    const nascimento = new Date (data_nascimento)
+    const agora = new Date
+
+    let idade = agora.getFullYear() - nascimento.getFullYear()
+    const mes = agora.getMonth() - nascimento.getMonth()
+
+    if(mes < 0 || mes === 0 && agora.getDate() < nascimento.getDate()){
+      idade--
+    }
+    return idade
+  }
+
 
   /*
   private atletas: Pessoa[] = []

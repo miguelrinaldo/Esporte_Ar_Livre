@@ -5,7 +5,7 @@
         @for (elem of listaAtletas(); track elem.id) {
         <div class="item-atletas">
             <span class="dados-atleta">
-                {{elem.id}} | Nome: {{elem.nome}} | CPF: {{elem.cpf}} | idade: {{elem.data_nascimento}} | Sexo: {{elem.sexo}} | Cidade: {{elem.cidade}} | UF: {{elem.uf}}
+                {{elem.id}} | Nome: {{elem.nome}} | CPF: {{elem.cpf}} | idade: {{CalcularIdade(elem.data_nascimento)}} | Sexo: {{elem.sexo}} | Cidade: {{elem.cidade}} | UF: {{elem.uf}}
             </span>
             <span class="links-lista">
                 <a class="lnk-editar" (click)="buscarPessoa(elem)"> Editar </a>
