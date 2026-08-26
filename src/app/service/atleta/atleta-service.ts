@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { Pessoa } from '../../models/pessoa';
+import { Atleta } from '../../models/atleta';
+
 
 @Injectable({
   providedIn: 'root',
@@ -11,38 +12,38 @@ export class AtletaService {
   constructor(private http: HttpClient) { }
 
   //ADICIONAR NA API
-  adicionarPessoa(pessoa: Pessoa): Observable<Pessoa> {
+  adicionarAtleta(atleta: Atleta): Observable<Atleta> {
     const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/atleta`
 
-    return this.http.post<Pessoa>(urlApi, pessoa)
+    return this.http.post<Atleta>(urlApi, atleta)
   }
 
   //LISTAR ATLETAS NA API
-  listarPessoa(): Observable<Pessoa[]> {
+  listarAtleta(): Observable<Atleta[]> {
     const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/atleta`
 
-    return this.http.get<Pessoa[]>(urlApi)
+    return this.http.get<Atleta[]>(urlApi)
   }
 
   //LISTAR ATLETA
-  listarAtleta(idpessoa: number):Observable<Pessoa>{
-    const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/atleta/${idpessoa}`
+  listarAtletas(idatleta: number):Observable<Atleta>{
+    const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/atleta/${idatleta}`
 
-    return this.http.get<Pessoa>(urlApi)
+    return this.http.get<Atleta>(urlApi)
   }
 
   //EXCLUIR NA API
-  exluirAtleta(pessoa:Pessoa): Observable<Pessoa> {
+  excluirAtleta(pessoa:Atleta): Observable<Atleta> {
     const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/atleta/${pessoa.id}`
 
-    return this.http.delete<Pessoa>(urlApi)
+    return this.http.delete<Atleta>(urlApi)
   }
 
   //ALTERAR NA API
-  alterarAtleta(pessoa: Pessoa):Observable<Pessoa>{
+  alterarAtleta(pessoa: Atleta):Observable<Atleta>{
     const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/atleta/${pessoa.id}`
 
-    return this.http.put<Pessoa>(urlApi, pessoa)
+    return this.http.put<Atleta>(urlApi, pessoa)
   }
 
  CalcularIdade(data_nascimento: string): number{
@@ -57,43 +58,6 @@ export class AtletaService {
     }
     return idade
   }
-
-
-  /*
-  private atletas: Pessoa[] = []
-
-  adicionar(pessoa: Pessoa) {
-    //ARRRRMENGUEEEE PARA GERAR O ID
-    pessoa.id = this.atletas.length + 1
-    
-    this.atletas.push(pessoa)
-  }
-
-  listar() {
-    console.table(this.atletas)
-    return this.atletas
-  }
-
-  private localizarAtleta(idAtleta: number){
-    return this.atletas.findIndex(elem => elem.id === idAtleta)
-  }
-
-  remover(posicaoArray: number){
-    this.atletas.splice(1,posicaoArray)
-  }
-
-  remover2(pessoa: Pessoa){
-    this.atletas = this.atletas.filter(elem => elem.id !== pessoa.id)
-  }
-
-  alterar(pessoa : Pessoa){
-    let posArray = this.localizarAtleta(pessoa.id)
-
-    if(posArray >=0){
-      this.atletas[posArray] = pessoa
-    }
-
-  }*/
 
 
 

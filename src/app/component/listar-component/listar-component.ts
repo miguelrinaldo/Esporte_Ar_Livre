@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { AtletaService } from '../../service/atleta/atleta-service';
-import { Pessoa } from '../../models/pessoa';
+import { Atleta } from '../../models/atleta';
 import { Router } from '@angular/router';
 
 
@@ -15,7 +15,7 @@ export class AtletaListaComponent {
 
   //DECLARAÇÃO ARRAY DO TIPO PESSOA
   //listaAtletas: Atleta[] = []
-  listaAtletas = signal<Pessoa[]>([])
+  listaAtletas = signal<Atleta[]>([])
 
   //DECLARAÇÃO CONSTRUTOR
   constructor(private router: Router, private http: AtletaService) { }
@@ -27,7 +27,7 @@ export class AtletaListaComponent {
 
   //LISTAR OS ATLETAS
   listarAtletas() {
-    this.http.listarPessoa()
+    this.http.listarAtleta()
       .subscribe({
         next: (dados) => {
 
@@ -44,9 +44,9 @@ export class AtletaListaComponent {
   }
 
   //EXCLUIR ATLETA
-  excluirAtleta(atleta: Pessoa){
+  excluirAtleta(atleta: Atleta){
     if(confirm(`Deseja excluir ${atleta.nome} da competição? `)){
-      this.http.exluirAtleta(atleta)
+      this.http.excluirAtleta(atleta)
       .subscribe({
         next:(dados)=>{
            this.listaAtletas.update(elem =>
@@ -65,7 +65,7 @@ export class AtletaListaComponent {
   }
 
   //ALTERAR DADOS
-  buscarPessoa(idAtleta: Pessoa){
+  buscarPessoa(idAtleta: Atleta){
     this.router.navigate(['/cadastroatleta', idAtleta])
   }
 

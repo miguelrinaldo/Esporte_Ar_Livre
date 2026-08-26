@@ -1,7 +1,7 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AtletaService } from '../../service/atleta/atleta-service';
-import { Pessoa } from '../../models/pessoa';
+import { Atleta } from '../../models/atleta';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -49,7 +49,7 @@ export class AtletaComponent {
   }
 
   carregaCampo(idAtleta: number) {
-    this.atletaService.listarAtleta(idAtleta)
+    this.atletaService.listarAtletas(idAtleta)
       .subscribe({
         next: (objAtleta) => {
           this.id = objAtleta.id
@@ -71,7 +71,7 @@ export class AtletaComponent {
   }
 
   enviaDadosAtleta() {
-    const pessoaAtleta = new Pessoa()
+    const pessoaAtleta = new Atleta()
     pessoaAtleta.nome = this.nome
     pessoaAtleta.cpf = this.cpf
     pessoaAtleta.data_nascimento = this.data_nascimento
@@ -83,7 +83,7 @@ export class AtletaComponent {
     pessoaAtleta.uf = this.uf
 
     if (!this.editar) {
-      this.atletaService.adicionarPessoa(pessoaAtleta)
+      this.atletaService.adicionarAtleta(pessoaAtleta)
         .subscribe({
           next: (resposta) => {
             console.log(resposta)
@@ -114,7 +114,7 @@ export class AtletaComponent {
   }
 
   listaAtleta(idAtleta: number) {
-    this.atletaService.listarAtleta(idAtleta)
+    this.atletaService.listarAtletas(idAtleta)
       .subscribe({
         next: (dados) => {
           console.table(dados)

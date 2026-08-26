@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CorridaService } from '../../service/corrida/corrida-service';
 import { CorridaListaComponent } from './corrida-lista-component';
 
 describe('CorridaLista', () => {

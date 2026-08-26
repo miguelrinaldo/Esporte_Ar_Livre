@@ -1,4 +1,24 @@
-import { Service } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { InscricaoModels } from '../../models/inscricao_models';
+import { Observable } from 'rxjs';
 
-@Service()
-export class InscricaoService {}
+@Injectable({
+    providedIn: 'root'
+})
+export class InscricaoService {
+
+    constructor(private http: HttpClient){}
+
+    adicionarAtletaCadastrado(atletaCadastrado: InscricaoModels): Observable<InscricaoModels> {
+        const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/atleta`
+
+        return this.http.post<InscricaoModels>(urlApi, atletaCadastrado)
+    }
+
+    buscaPorCpf(cpfAtleta: number){
+        const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/atleta${cpfAtleta}`
+
+        return this.http.get<InscricaoModels>(urlApi)
+    }
+}
