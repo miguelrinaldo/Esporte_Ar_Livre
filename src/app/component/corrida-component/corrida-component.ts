@@ -44,7 +44,7 @@ export class CorridaComponent {
   dadosFormulario() {
     const corrida = new Corrida()
     corrida.descricao_corrida = this.descricao_corrida
-    corrida.datacorrida = this.data_corrida
+    corrida.data_corrida = this.data_corrida
     corrida.distancia5km = this.distancia5km
     corrida.distancia10km = this.distancia10km
     corrida.distancia25km = this.distancia25km
@@ -84,7 +84,7 @@ export class CorridaComponent {
         next: (dadosCorrida) => {
 
           this.descricao_corrida = dadosCorrida.descricao_corrida
-          this.data_corrida = dadosCorrida.datacorrida
+          this.data_corrida = dadosCorrida.data_corrida
           this.distancia5km = dadosCorrida.distancia5km
           this.distancia10km = dadosCorrida.distancia10km
           this.distancia25km = dadosCorrida.distancia25km
