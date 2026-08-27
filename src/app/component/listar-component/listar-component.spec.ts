@@ -72,7 +72,7 @@ describe('AtletaListarComponent', () => {
 
   expect(requisicao.request.method).toBe('GET')
 
-requisicao.flush(atletas)
+  requisicao.flush(atletas)
     
 })
 
