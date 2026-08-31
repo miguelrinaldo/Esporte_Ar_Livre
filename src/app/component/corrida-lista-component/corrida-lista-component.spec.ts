@@ -107,7 +107,7 @@ it('Excluir uma corrida', () => {
     const request = httpMock.expectOne('https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/corrida/2')
 
     expect(request.request.method).toBe('DELETE')
-    request.flush(corridaMockq)
+    request.flush(corridaMock)
 })
 
 });
