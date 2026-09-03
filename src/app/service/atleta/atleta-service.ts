@@ -13,35 +13,35 @@ export class AtletaService {
 
   //ADICIONAR NA API
   adicionarAtleta(atleta: Atleta): Observable<Atleta> {
-    const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/atleta`
+    const urlApi = `http://127.0.0.1:8000/pessoa/`
 
     return this.http.post<Atleta>(urlApi, atleta)
   }
 
   //LISTAR ATLETAS NA API
   listarAtleta(): Observable<Atleta[]> {
-    const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/atleta`
+    const urlApi = `http://127.0.0.1:8000/pessoa/`
 
     return this.http.get<Atleta[]>(urlApi)
   }
 
   //LISTAR ATLETA
   listarAtletas(idatleta: number):Observable<Atleta>{
-    const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/atleta/${idatleta}`
+    const urlApi = `http://127.0.0.1:8000/pessoa/${idatleta}`
 
     return this.http.get<Atleta>(urlApi)
   }
 
   //EXCLUIR NA API
   excluirAtleta(pessoa:Atleta): Observable<Atleta> {
-    const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/atleta/${pessoa.id}`
+    const urlApi = `http://127.0.0.1:8000/docs#/Pessoa/excluir_pessoa__id__delete/${pessoa.id}`
 
     return this.http.delete<Atleta>(urlApi)
   }
 
   //ALTERAR NA API
   alterarAtleta(pessoa: Atleta):Observable<Atleta>{
-    const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/atleta/${pessoa.id}`
+    const urlApi = `http://127.0.0.1:8000/pessoa/${pessoa.id}`
 
     return this.http.put<Atleta>(urlApi, pessoa)
   }

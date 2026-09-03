@@ -6,39 +6,38 @@
         <label for="nome">Nome</label>
         <input type="text" name="nome" [(ngModel)]="nome" id="nome" class="input01" required maxlength="80" placeholder="Informar seu nome">
 
-
-
-          <label for="cpf">CPF</label>
+        <label for="cpf">CPF</label>
         <input type="text" name="cpf" [(ngModel)]="cpf" id="cpf" class="input02" required maxlength="80" placeholder="Informar seu cpf">
-          <label for="sexo">Sexo</label>
+
+        <label for="sexo">Sexo</label>
         <input type="radio" name="sexo" id="sexoM" [(ngModel)]="sexo" class="btnSelecao" value="M"> Masculino
 
-         <input type="radio" name="sexoF" [(ngModel)]="sexo"id="sexoF" class="btnSelecao" value="F"> Feminino
+        <input type="radio" name="sexoF" [(ngModel)]="sexo"id="sexoF" class="btnSelecao" value="F"> Feminino
 
-          <input type="radio" name="sexo" [(ngModel)]="sexo" id="sexoN" class="btnSelecao" value="N"> Não sei identificar
+        <input type="radio" name="sexo" [(ngModel)]="sexo" id="sexoN" class="btnSelecao" value="N"> Não sei identificar
 
 
-          <label for="cep">CEP</label>
-          <input type="text" name="cep" [(ngModel)]="cep" id="cep" class="input02" required maxlength="9" placeholder="Informe seu cep">
+        <label for="cep">CEP</label>
+        <input type="text" name="cep" [(ngModel)]="cep" id="cep" class="input02" required maxlength="9" placeholder="Informe seu cep">
 
-          <label for="data_nascimento">Data de Nascimento</label>
-          <input type="date" name="data_nascimento" id="data_nascimento" [(ngModel)]="data_nascimento" >
+        <label for="data_nascimento">Data de Nascimento</label>
+        <input type="date" name="data_nascimento" id="data_nascimento" [(ngModel)]="data_nascimento" >
 
-            <label for="rua-logradouro">Rua/Logradouro</label>
-          <input type="text" name="rua-logradouro" [(ngModel)]="rua_logradouro" id="rua-logradouro" class="input01" required maxlength="100" placeholder="Informe Rua/Logradouro">
+        <label for="rua-logradouro">Rua/Logradouro</label>
+        <input type="text" name="rua-logradouro" [(ngModel)]="rua_logradouro" id="rua-logradouro" class="input01" required maxlength="100" placeholder="Informe Rua/Logradouro">
 
-            <label for="bairro">Bairro</label>
-          <input type="text" name="bairro" [(ngModel)]="bairro" id="bairro" class="input02" required maxlength="100" placeholder="Informe seu bairro ">
+        <label for="bairro">Bairro</label>
+        <input type="text" name="bairro" [(ngModel)]="bairro" id="bairro" class="input02" required maxlength="100" placeholder="Informe seu bairro ">
 
-            <label for="cidade">Cidade</label>
-          <input type="text" name="cidade"  [(ngModel)]="cidade" id="cidade" class="input02" required maxlength="60" placeholder="Informe sua cidade">
+        <label for="cidade">Cidade</label>
+        <input type="text" name="cidade"  [(ngModel)]="cidade" id="cidade" class="input02" required maxlength="60" placeholder="Informe sua cidade">
 
-            <label for="uf">UF</label>
-          <input type="text" name="uf" [(ngModel)]="uf" id="uf" class="input02" required maxlength="2" placeholder="Informe sua estado">
+        <label for="uf">UF</label>
+        <input type="text" name="uf" [(ngModel)]="uf" id="uf" class="input02" required maxlength="2" placeholder="Informe sua estado">
 
-          <div id="div-btns">
-            <button type="submit" id="btnAdd">Cadastrar Atleta</button>
-              <button type="reset" id="btnLimpar">Limpar Atleta</button>
+         <div id="div-btns">
+         <button type="submit" id="btnAdd">Cadastrar Atleta</button>
+         <button type="reset" id="btnLimpar">Limpar Atleta</button>
 
           </div>
     </form>
