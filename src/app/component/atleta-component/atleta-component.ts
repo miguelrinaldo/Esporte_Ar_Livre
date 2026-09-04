@@ -83,13 +83,13 @@ export class AtletaComponent {
     pessoaAtleta.uf = this.uf
 
     if (!this.editar) {
-      this.atletaService.adicionarAtleta(pessoaAtleta)
+      this.atletaService.cadastrar(pessoaAtleta)
         .subscribe({
           next: (resposta) => {
             console.log(resposta)
           },
           error: (msgErro) => {
-            console.log("Erro ao cadastrar  o atleta ", msgErro)
+            console.log("Erro ao cadastrar o atleta ", msgErro)
           }
         })
     } else {

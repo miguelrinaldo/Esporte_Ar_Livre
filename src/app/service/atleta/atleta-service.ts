@@ -12,7 +12,7 @@ export class AtletaService {
   constructor(private http: HttpClient) { }
 
   //ADICIONAR NA API
-  adicionarAtleta(atleta: Atleta): Observable<Atleta> {
+  cadastrar(atleta: Atleta): Observable<Atleta> {
     const urlApi = `http://127.0.0.1:8000/pessoa/`
 
     return this.http.post<Atleta>(urlApi, atleta)
@@ -32,20 +32,23 @@ export class AtletaService {
     return this.http.get<Atleta>(urlApi)
   }
 
-  //EXCLUIR NA API
-  excluirAtleta(pessoa:Atleta): Observable<Atleta> {
-    const urlApi = `http://127.0.0.1:8000/docs#/Pessoa/excluir_pessoa__id__delete/${pessoa.id}`
 
-    return this.http.delete<Atleta>(urlApi)
-  }
-
-  //ALTERAR NA API
+   //ALTERAR NA API
   alterarAtleta(pessoa: Atleta):Observable<Atleta>{
-    const urlApi = `http://127.0.0.1:8000/pessoa/${pessoa.id}`
+    const urlApi = `hhttp://127.0.0.1:8000/pessoa/${pessoa.id}`
 
     return this.http.put<Atleta>(urlApi, pessoa)
   }
 
+
+  //EXCLUIR NA API
+  excluirAtleta(pessoa:Atleta): Observable<Atleta> {
+    const urlApi = `http://127.0.0.1:8000/pessoa/${pessoa.id}`
+
+    return this.http.delete<Atleta>(urlApi)
+  }
+
+ 
  CalcularIdade(data_nascimento: string): number{
     const nascimento = new Date (data_nascimento)
     const agora = new Date

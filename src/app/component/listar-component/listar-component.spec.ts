@@ -94,7 +94,7 @@ describe('AtletaListarComponent', () => {
     "id": 1
   }
 
-  service.adicionarAtleta(atleta).subscribe(result => {
+  service.cadastrar(atleta).subscribe(result => {
   expect(result).toEqual(atleta)
   })
 
